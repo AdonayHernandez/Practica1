@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+
+
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">numero uno</label>
+          <input type="email" class="form-control" id="num_uno" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">numero dos</label>
+          <input type="password" class="form-control" id="num_dos">
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="sumar()">Sumar</button>
+        <button type="submit" class="btn btn-primary" onclick="Restar()">resta</button>
+        <button type="submit" class="btn btn-primary" onclick="Multiplicacion()">Multiplicacion</button>
+        <button type="submit" class="btn btn-primary" onclick="Divicion()">Divicion</button>
+      </form>
+
+    <h1> Calculadora - suma</h1>
+    <input type="text" placeholder="Escibe un numero" id="num_uno">
+    <input type="text" placeholder="Escibe un numero" id="num_dos">
+    <input type="button" value="sumar" onclick="Sumar()">
+    <input type="button" value="Restar" onclick="Restar()">    
+    <input type="button" value="multiplicacion" onclick="Multiplicacion()">    
+    <input type="button" value="divicion" onclick="Dividir()">
+
+    <script type="text/javascript">
+        function Sumar(){
+            var numero_uno=parseInt(document.getElementById("num_uno").value);
+            var numero_dos=parseInt(document.getElementById("num_dos").value);
+            var result;
+            result = numero_uno + numero_dos
+            alert('El resultado de la suma es:' + result);
+        }
+
+        function Restar(){
+            var numero_uno=parseInt(document.getElementById("num_uno").value);
+            var numero_dos=parseInt(document.getElementById("num_dos").value);
+            var result;
+            result = numero_uno - numero_dos
+            alert('El resultado de la resta es:' + result);
+        }
+
+        
+        function Multiplicacion(){
+            var numero_uno=parseInt(document.getElementById("num_uno").value);
+            var numero_dos=parseInt(document.getElementById("num_dos").value);
+            var result;
+            result = numero_uno * numero_dos
+            alert('El resultado de la multiplicacion es:' + result);
+        }
+
+        
+        function Divicion(){
+            var numero_uno=parseInt(document.getElementById("num_uno").value);
+            var numero_dos=parseInt(document.getElementById("num_dos").value);
+            var result;
+            result = numero_uno / numero_dos
+            alert('El resultado de la divicion es:' + result);
+        }
+
+    </script>
+</body>
+</html>
